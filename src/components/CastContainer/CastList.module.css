@@ -1,0 +1,11 @@
+.wrapCastList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CastList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

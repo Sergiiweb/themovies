@@ -1,0 +1,83 @@
+.MoviesListCard {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.poster {
+    width: 38%;
+}
+
+.poster img {
+    width: 98%;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 1px solid #9e9e9c;
+}
+
+.info {
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-shadow: 1px 1px 2px #9e9e9c;
+    border-radius: 20px;
+    border: 1px solid #9e9e9c;
+    padding: 0 20px;
+    box-shadow: 5px 5px 10px #9e9e9c;
+    text-align: center;
+}
+
+.overview {
+
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.starsRating {
+    transform: scale(2, 2);
+    margin-bottom: 10px;
+    transition: 1s;
+}
+
+@media (max-width: 680px) {
+    .starsRating {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+.genres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.genresList {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.genreChip {
+    box-shadow: 5px 5px 10px #9e9e9c;
+}
+
+.chipWrap {
+    margin: 5px 20px;
+}
+
+.homepageLink a {
+    text-decoration: none;
+}
+
+.infoDiv {
+    margin-bottom: 10px;
+}
