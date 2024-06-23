@@ -10,13 +10,13 @@ body {
 
 #dark {
     background-color: #101418;
-    color: #f2f2f2;
-    transition: 1s;
+    color: snow;
+    transition: 0.5s;
 }
 
 #light {
-    background-color: #f2f2f2;
+    background-color: snow;
     color: #101418;
-    transition: 1s;
+    transition: 0.5s;
 }
 

@@ -1,12 +1,12 @@
 import {useParams} from "react-router-dom";
-import {useEffect} from "react";
+import {FC, useEffect} from "react";
 
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {castActions} from "../../redux";
 import {CastActor} from "./CastActor";
 import css from "./CastList.module.css";
 
-const CastList = () => {
+const CastList: FC = () => {
     const {cast} = useAppSelector(state => state.cast);
     const dispatch = useAppDispatch();
     const {id} = useParams();

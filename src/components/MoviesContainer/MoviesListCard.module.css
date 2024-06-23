@@ -42,9 +42,9 @@
 }
 
 .starsRating {
-    transform: scale(2, 2);
+    transform: scale(1.5, 1.5);
     margin-bottom: 10px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 @media (max-width: 680px) {
@@ -80,4 +80,12 @@
 
 .infoDiv {
     margin-bottom: 10px;
+}
+
+.castList {
+    margin-bottom: 10px;
+}
+
+.Badge {
+    cursor: pointer;
 }

@@ -1,5 +1,5 @@
 import {apiService, IRes} from "./apiService";
-import {IMovieCast, IMovieDetails, IMoviesList} from "../interfaces";
+import {IMovieCast, IMovieDetails, IMoviesList, ITrailers} from "../interfaces";
 import {urls} from "../constants";
 
 const movieService = {
@@ -17,6 +17,9 @@ const movieService = {
     },
     castById(id: number): IRes<IMovieCast> {
         return apiService.get(urls.cast.byId(id));
+    },
+    trailersById(id: number): IRes<ITrailers> {
+        return apiService.get(urls.trailers.byId(id));
     }
 }
 

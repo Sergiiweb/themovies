@@ -3,4 +3,5 @@ export * from "./movieDetailsInterface";
 export * from "./moviesListInterface";
 export * from "./genresInterface";
 export * from "./movieCastInterface";
+export * from "./trailersInterface";
 

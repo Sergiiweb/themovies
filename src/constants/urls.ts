@@ -6,6 +6,7 @@ const posterBaseUrl = 'https://image.tmdb.org/t/p/w500';
 const movie = '/movie';
 const genres = '/genre/movie/list';
 const search = '/search/movie';
+const trailers = "videos";
 
 const urls = {
     movies: {
@@ -19,6 +20,9 @@ const urls = {
     },
     cast: {
         byId: (id: number): string => `${movie}/${id}/credits`
+    },
+    trailers: {
+        byId: (id: number): string => `${movie}/${id}/${trailers}`
     }
 }
 

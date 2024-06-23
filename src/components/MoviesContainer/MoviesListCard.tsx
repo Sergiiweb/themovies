@@ -1,20 +1,29 @@
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
-import {Chip} from "@mui/material";
+import {Badge, Box, Chip} from "@mui/material";
 
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {genreActions, movieActions} from "../../redux";
 import {PosterPreview} from "./PosterPreview";
-import {StarsRating} from "../StarsRating";
 import {IGenre} from "../../interfaces";
 import {CastList} from "../CastContainer";
 import css from "./MoviesListCard.module.css";
+import {StarsRatingWithMui} from "../StarsRating/StarsRatingWhithMui";
+import ReactPlayer from "react-player/youtube";
+import {Trailers} from "../TrailersContainer";
 
+
+const shapeStyles = {bgcolor: 'primary.main', width: 40, height: 40};
+const shapeCircleStyles = {borderRadius: '50%'};
+const circle = (
+    <Box component="span" sx={{...shapeStyles, ...shapeCircleStyles}}/>
+);
 const MoviesListCard = () => {
     const {id} = useParams();
     const {movie} = useAppSelector(state => state.movies);
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
+
 
     useEffect(() => {
         dispatch(movieActions.getById({id: +id}))
@@ -38,7 +47,8 @@ const MoviesListCard = () => {
                             <p className={css.overview}>{movie.overview}</p>
                             <div className={css.rating}>
                                 <h4>Rating:</h4>
-                                <div className={css.starsRating}><StarsRating vote_average={movie.vote_average}/></div>
+                                <div className={css.starsRating}><StarsRatingWithMui vote_average={movie.vote_average}/>
+                                </div>
                             </div>
                             <div className={css.genres}>
                                 <h4>Genres:</h4>
@@ -60,8 +70,20 @@ const MoviesListCard = () => {
                             }
                         </div>
                     </div>
-                    <div>
+                    <div className={css.castList}>
                         <CastList/>
+                    </div>
+                    <div className={css.genresList}>
+                        <Trailers/>
+                    </div>
+                    <div className={css.genresList}>
+                        {movie.genres.map(genre => <div className={css.chipWrap} key={genre.id}><Badge
+                            color="success" overlap="circular" badgeContent={genre.name} className={css.Badge}
+                            onClick={() => setGenre(genre)}>
+                            {circle}
+                        </Badge>
+                        </div>)
+                        }
                     </div>
                 </div>
             }

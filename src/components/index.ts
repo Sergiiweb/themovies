@@ -7,3 +7,4 @@ export * from "./GenresContainer";
 export * from "./SearchContainer";
 export * from "./SwitchTheme";
 export * from "./CastContainer";
+export * from "./TrailersContainer";
