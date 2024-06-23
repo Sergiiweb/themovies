@@ -17,7 +17,7 @@ const Trailers: FC = () => {
 
     return (
         <>
-            <h3 className="title">Trailers:</h3>
+            <h3 className={css.Title}>Trailers:</h3>
             <div className={css.Trailers}>
                 {results.length &&
                     results.map(trailer => <Trailer key={trailer.id} trailer={trailer}/>)

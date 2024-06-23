@@ -73,7 +73,7 @@ const MoviesListCard = () => {
                     <div className={css.castList}>
                         <CastList/>
                     </div>
-                    <div className={css.genresList}>
+                    <div>
                         <Trailers/>
                     </div>
                     <div className={css.genresList}>
