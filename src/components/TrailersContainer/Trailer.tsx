@@ -13,7 +13,6 @@ const Trailer:FC<IProps> = ({trailer}) => {
         <div className={css.Trailer}>
             <div>{trailer.name}</div>
             <div>
-
                 <ReactPlayer
                     light
                     url={`https://youtu.be/${trailer.key}`}
