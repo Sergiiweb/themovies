@@ -12,13 +12,16 @@ const Trailer:FC<IProps> = ({trailer}) => {
     return (
         <div className={css.Trailer}>
             <div>{trailer.name}</div>
-            <ReactPlayer
-                light
-                url={`https://youtu.be/${trailer.key}`}
-                width="320px"
-                height="180px"
-                playing
-            />
+            <div>
+
+                <ReactPlayer
+                    light
+                    url={`https://youtu.be/${trailer.key}`}
+                    width="320px"
+                    height="180px"
+                    playing
+                />
+            </div>
         </div>
     );
 };
