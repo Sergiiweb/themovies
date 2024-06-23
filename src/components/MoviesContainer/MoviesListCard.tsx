@@ -9,7 +9,6 @@ import {IGenre} from "../../interfaces";
 import {CastList} from "../CastContainer";
 import css from "./MoviesListCard.module.css";
 import {StarsRatingWithMui} from "../StarsRating/StarsRatingWhithMui";
-import ReactPlayer from "react-player/youtube";
 import {Trailers} from "../TrailersContainer";
 
 
